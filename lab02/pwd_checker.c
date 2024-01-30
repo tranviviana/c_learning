@@ -21,13 +21,13 @@ For the simplicity of this exercise:
 /* Returns true if the length of PASSWORD is at least 10, false otherwise */
 bool check_length(const char *password) {
     int length = strlen(password);
-    bool meets_len_req = (length <= 10);
+    bool meets_len_req = (length >= 10);
     return meets_len_req;
 }
 
 /* Returns true if LETTER is in the range [LOWER, UPPER], false otherwise */
 bool check_range(char letter, char lower, char upper) {
-    bool is_in_range = (letter > lower && letter < upper);
+    bool is_in_range = (letter >= lower && letter <= upper);
     return is_in_range;
 }
 
@@ -58,14 +58,14 @@ bool check_lower(const char *password) {
 /* Returns true if PASSWORD contains at least one number, false otherwise */
 bool check_number(const char *password) {
     while (*password != '\0') {
-        if (check_range(*password, 0, 9)) {
+        if (check_range(*password,'0' , '9')) {
             return true;
         }
         ++password;
     }
-    return false;
+        return false;
+    
 }
-
 /* Returns true if the person's first and last name are NOT in the password, false otherwise */
 bool check_name(const char *first_name, const char *last_name, const char *password) {
     /* Type "man strstr" in your terminal to learn what strstr does!
@@ -87,3 +87,4 @@ bool check_password(const char *first_name, const char *last_name, const char *p
     upper = check_upper(password);
     return (lower && length && name && upper && number);
 }
+

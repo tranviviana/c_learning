@@ -27,7 +27,15 @@ main:
 # The return value should be stored in a0
 factorial:
     # YOUR CODE HERE
-
+    addi t1, x0, 1 #total = 1
+    addi t2, x0, 1 #ending factor = 1
+    loop:
+    beq a0 t2 finish
+    mul t1 a0 t1 #total = total * input
+    addi a0 a0 -1 # input - input - 1
+    j loop
     # This is how you return from a function. You'll learn more about this later.
+    finish:
+    mv a0 t1 #return a0 = total
     # This should be the last line in your program.
     jr ra

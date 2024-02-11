@@ -8,5 +8,5 @@ ecall
 
 # This exits the program
 addi a0 x0 17
-addi a1 x0 2024
+addi a1 x0 0
 ecall

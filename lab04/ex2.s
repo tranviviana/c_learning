@@ -32,32 +32,41 @@ ex2:
     # a1 contains the power to raise to
     # the return value should be the result of a0^a1
     #     where ^ is the exponent operator, not XOR
-    addi sp sp -12
+    addi sp sp -16
     sw s0 0(sp)
     sw ra 4(sp)
     sw a0 8(sp)
+    sw a1 12(sp)
 
     # return 1 if a1 == 0
+    addi a1 a1 -1
     beq a1 x0 ex2_zero_case
 
     # otherwise, return ex2(a0, a1-1) * a0
+    lw a0 8(sp)
     mv s0 a0      # save a0 in s0
+    sw s0 0(sp)
+    lw a1 12(sp)
     addi a1 a1 -1 # decrement a1
+    sw a1 12(sp)
 
     jal ra ex2    # call ex2(a0, a1-1)
+    
     lw a0 8(sp)
     mul a0 a0 s0  # multiply ex2(a0, a1-1) by s0
                   # (which contains the value of a0)
-
+    sw a0 0(sp)
     j ex2_end
 
 ex2_zero_case:
     li a0 1
+    
 
 ex2_end:
     lw s0 0(sp)
     lw ra 4(sp)
-    lw a0 8(sp)
-    addi sp sp 12
+    lw a0 0(sp)
+    lw a1 12(sp)
+    addi sp sp 16
 
     jr ra

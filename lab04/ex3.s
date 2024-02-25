@@ -39,6 +39,7 @@ ex3:
     sw a0 4(sp)
     sw t0 8(sp)
     sw ra 12(sp)
+    addi a1 a1 -1
     beq a1 x0 ex3_zero_case
     
     # otherwise, return ex3(a0, a1-1) * a0

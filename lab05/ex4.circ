@@ -317,6 +317,10 @@
       <a name="output" val="true"/>
       <a name="width" val="16"/>
     </comp>
+    <comp loc="(280,80)" name="rot1"/>
+    <comp loc="(340,80)" name="rot1"/>
+    <wire from="(170,80)" to="(220,80)"/>
+    <wire from="(340,80)" to="(660,80)"/>
   </circuit>
   <circuit name="rot4">
     <a name="appearance" val="custom"/>

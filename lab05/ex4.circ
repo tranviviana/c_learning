@@ -381,5 +381,8 @@
       <a name="output" val="true"/>
       <a name="width" val="16"/>
     </comp>
+    <comp loc="(230,80)" name="rot4"/>
+    <comp loc="(290,80)" name="rot4"/>
+    <wire from="(290,80)" to="(660,80)"/>
   </circuit>
 </project>

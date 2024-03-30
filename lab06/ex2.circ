@@ -134,11 +134,11 @@
       <a name="spacing" val="2"/>
     </comp>
     <comp lib="0" loc="(230,460)" name="Constant">
-      <a name="value" val="0x5"/>
+      <a name="value" val="0x7"/>
       <a name="width" val="3"/>
     </comp>
     <comp lib="0" loc="(230,540)" name="Constant">
-      <a name="value" val="0x4"/>
+      <a name="value" val="0x6"/>
       <a name="width" val="3"/>
     </comp>
     <comp lib="0" loc="(250,160)" name="Tunnel">

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <project source="3.8.0-61c.f1d5ac0" version="1.0">
   This file is intended to be loaded by Logisim-evolution v3.8.0-61c.f1d5ac0(https://github.com/61c-teach/logisim-evolution).
+=======
+<project source="3.8.0-61c.c58792e" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.8.0-61c.c58792e(https://github.com/61c-teach/logisim-evolution).
+>>>>>>> 458fd334851f20f2efee6485455e0ba3a9622b4a
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -104,6 +109,7 @@
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
+<<<<<<< HEAD
     <comp lib="3" loc="(290,120)" name="Multiplier"/>
     <comp lib="3" loc="(530,120)" name="Adder"/>
     <comp lib="4" loc="(360,90)" name="Register">
@@ -137,5 +143,7 @@
     <wire from="(670,120)" to="(790,120)"/>
     <wire from="(790,120)" to="(790,130)"/>
     <wire from="(790,130)" to="(810,130)"/>
+=======
+>>>>>>> 458fd334851f20f2efee6485455e0ba3a9622b4a
   </circuit>
 </project>

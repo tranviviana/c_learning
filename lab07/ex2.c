@@ -40,13 +40,19 @@ double dotp_reduction(double* x, double* y, int arr_size) {
 double dotp_manual_reduction(double* x, double* y, int arr_size) {
     double global_sum = 0.0;
     // TODO: Implement this function
-#pragma omp parallel for 
+
+#pragma omp parallel 
+    {
+    double sum = 0.0;
+#pragma omp for
     for (int i = 0; i < arr_size; i++) {
-        float sum += x[i] *y[i];
-#pragma omp critical
-        global_sum += sum;
+        sum += x[i] * y[i];
     }
     // Do NOT use the `reduction` directive here!
+#pragma omp critical
+    global_sum += sum;
+    }
     return global_sum;
+    
 
 }
